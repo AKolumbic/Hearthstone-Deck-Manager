@@ -5,13 +5,14 @@
   "main": "server.js",
   "repository": "https://github.com/AKolumbic/Hearthstone-Deck-Manager",
   "author": "Andrew Kolumbic",
-  "license": "WTFPL",
+  "license": "MIT",
   "private": false,
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
-    "mongoose": "^5.3.12"
+    "mongoose": "^5.3.12",
+    "unirest": "^0.5.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"

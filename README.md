@@ -8,3 +8,6 @@ The goal of this project is to make an emulator of Hearthstone's Deck Manager us
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Node](https://nodejs.org/en/docs/)
 - [Hearthstone API](http://hearthstoneapi.com/)
+
+# Author
+- Andrew Kolumbic

@@ -1,10 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
-
+const cards = require('./routes/cardRouter');
 const port = process.env.PORT || 5555; 
 const server = express();
+require('dotenv').config();
+server.use(express.json());
+server.use(cors());
+
 
 mongoose.Promise = global.Promise; // mongoose's promise library is deprecated, so we sub in the general ES6 promises here
 const databaseOptions = {
@@ -19,12 +22,11 @@ mongoose.connection
     .on('error', (err) => console.warn(err));
 
 
-// setting up middleware
-server.use(express.json());
-server.use(cors());
-
-// test route
+// Sanity Check
 server.get('/', (req, res) => res.send(`The server is up and running!`));
+
+// API routes
+server.use('/cards', cards) // route for grabbing cards
 
 // initializing the server
 server.listen(port, () => console.log(`The server is listening on port ${port}`));

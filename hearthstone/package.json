@@ -1,7 +1,9 @@
 {
   "name": "hearthstone",
   "version": "0.1.0",
+  "description": "React Front End for Hearthstone Deck Manager emulator",
   "private": false,
+  "license": "MIT",
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
