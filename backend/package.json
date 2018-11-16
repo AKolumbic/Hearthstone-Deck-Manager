@@ -1,0 +1,19 @@
+{
+  "name": "hs-deck-manager-backend",
+  "version": "1.0.0",
+  "description": "Database and Server code for Hearthstone Deck Manager emulator",
+  "main": "server.js",
+  "repository": "https://github.com/AKolumbic/Hearthstone-Deck-Manager",
+  "author": "Andrew Kolumbic",
+  "license": "WTFPL",
+  "private": false,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}

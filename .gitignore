@@ -1,0 +1,7 @@
+# Node Modules
+/backend/node_modules
+/hearthstone/node_modules
+
+# Environment Variables
+/backend/.env
+/hearthstone/.env
