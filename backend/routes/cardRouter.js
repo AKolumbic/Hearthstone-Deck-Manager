@@ -1,7 +1,8 @@
+require('dotenv').config({path: '../.env'});
 const express = require('express');
 const unirest = require('unirest');
 const router = express.Router();
-const HS_API_KEY = process.env.HS_API_KEY
+const HS_API_KEY = process.env.HS_API_KEY;
 
 router.get('/', (req, res) => {
     unirest
