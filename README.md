@@ -9,5 +9,9 @@ The goal of this project is to make an emulator of Hearthstone's Deck Manager us
 - [Node](https://nodejs.org/en/docs/)
 - [Hearthstone API](http://hearthstoneapi.com/)
 
+# Endpoints
+- All cards: localhost:5555/cards/all
+- Classic Set: localhost:5555/cards/classic
+
 # Author
 - Andrew Kolumbic

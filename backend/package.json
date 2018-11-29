@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Database and Server code for Hearthstone Deck Manager emulator",
   "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "repository": "https://github.com/AKolumbic/Hearthstone-Deck-Manager",
   "author": "Andrew Kolumbic",
   "license": "MIT",
