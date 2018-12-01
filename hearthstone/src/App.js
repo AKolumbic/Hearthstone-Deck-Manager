@@ -21,7 +21,7 @@ class App extends Component {
 
   getDrBoom () {
     axios
-      .get('http://localhost:8008/drboom/')
+      .get('http://localhost:8888/boom/')
       .then(boom => {
         console.log("Response: ", boom);
         this.setState({ cards: boom.data });
