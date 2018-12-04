@@ -49,7 +49,7 @@ router.get('/hunter/', (req, res) => {
 });
 
 // Returns all collectible Mage cards
-router.get('/Mage/', (req, res) => {
+router.get('/mage/', (req, res) => {
     unirest
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/mage?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
