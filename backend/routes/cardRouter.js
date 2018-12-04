@@ -19,4 +19,65 @@ router.get('/', (req, res) => {
         });
 });
 
+// Returns cards by partial name. Collectible only.
+router.get('/search/:id', (req, res) => {
+    let { query } = req.params.id;
+    console.log(query);
+    // TODO: use regex to replace '%'s for spaces. Middleware?
+    unirest
+        .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/${query}?collectible=1`)
+        .header("X-Mashape-Key", HS_API_KEY)
+        .end((result) => {
+            console.log(result.status);
+            console.log(result.headers);
+            // console.log(result.body);
+            res.status(200).send(result);
+        });
+});
+
+// Returns all collectible cards in a set. Example values: Blackrock Mountain, Classic.
+// KNOWN ISSUE: Curse of Naxxramas
+router.get('/sets/:id', (req, res) => {
+    const { set } = req.params.id;
+    unirest
+        .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/${set}?collectible=1`)
+        .header("X-Mashape-Key", HS_API_KEY)
+        .end((result) => {
+            console.log(result.status);
+            console.log(result.headers);
+            // console.log(result.body);
+            res.status(200).send(result);
+        });
+});
+
+// Returns all the cards of a certain tribe. Example values: Mech, Murloc.
+// NOTE: I use "tribe" instead of "race" as the API does to better reflect language devs/players use.
+router.get('/tribe/:id', (req, res) => {
+    const { tribe } = req.params.id;
+    unirest
+        .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/races/${tribe}`)
+        .header("X-Mashape-Key", HS_API_KEY)
+        .end((result) => {
+            console.log(result.status);
+            console.log(result.headers);
+            // console.log(result.body);
+            res.status(200).send(result);
+        });
+});
+
+// Returns all the cards of a certain quality. 
+// Valid qualities in decending order: Legendary, Epic, Rare, Common
+router.get('/qualities/:id', (req, res) => {
+    const { quality } = req.params.id;
+    unirest
+        .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/qualities/${quality}?collectible=1`)
+        .header("X-Mashape-Key", HS_API_KEY)
+        .end((result) => {
+            console.log(result.status);
+            console.log(result.headers);
+            // console.log(result.body);
+            res.status(200).send(result);
+        });
+});
+
 module.exports = router;
