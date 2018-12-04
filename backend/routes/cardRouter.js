@@ -1,10 +1,14 @@
 require('dotenv').config({path: '../.env'});
 const express = require('express');
 const unirest = require('unirest');
+const classes = require('/classRouter');
 const HS_API_KEY = process.env.HS_API_KEY;
 
 // Initizalization/setup
 const router = express.Router();
+
+// returns all cards organized by 
+router.use('/class/', classes);
 
 // Returns all available Hearthstone cards including non collectible cards.
 router.get('/', (req, res) => {
@@ -23,7 +27,7 @@ router.get('/', (req, res) => {
 router.get('/search/:id', (req, res) => {
     let { query } = req.params.id;
     console.log(query);
-    // TODO: use regex to replace '%'s for spaces. Middleware?
+    // TODO: use regex to replace '%'s for spaces. Middleware? // return str.replace(/\s/g, '%');
     unirest
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/${query}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
@@ -39,6 +43,7 @@ router.get('/search/:id', (req, res) => {
 // KNOWN ISSUE: Curse of Naxxramas
 router.get('/sets/:id', (req, res) => {
     const { set } = req.params.id;
+    console.log(set)
     unirest
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/${set}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
@@ -50,12 +55,13 @@ router.get('/sets/:id', (req, res) => {
         });
 });
 
-// Returns all the cards of a certain tribe. Example values: Mech, Murloc.
+// Returns all the collectible cards of a certain tribe. Example values: Mech, Murloc.
 // NOTE: I use "tribe" instead of "race" as the API does to better reflect language devs/players use.
 router.get('/tribe/:id', (req, res) => {
     const { tribe } = req.params.id;
+    console.log(tribe)
     unirest
-        .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/races/${tribe}`)
+        .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/races/${tribe}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
             console.log(result.status);
@@ -65,10 +71,11 @@ router.get('/tribe/:id', (req, res) => {
         });
 });
 
-// Returns all the cards of a certain quality. 
+// Returns all the collectible cards of a certain quality. 
 // Valid qualities in decending order: Legendary, Epic, Rare, Common
 router.get('/qualities/:id', (req, res) => {
     const { quality } = req.params.id;
+    console.log(quality)
     unirest
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/qualities/${quality}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
