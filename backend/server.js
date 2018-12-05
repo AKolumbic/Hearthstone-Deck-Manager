@@ -20,7 +20,7 @@ const corsOptions = {
 server.use(cors(corsOptions));
 
 // Sanity Check
-server.get('/', (req, res) => res.send(`The server is up and running!`));
+server.get('/', (req, res) => res.send('The server is up and running!'));
 
 // API Routes and Endpoints
 // Returns all cards, collectable and noncollectable. See Documentation for further endpoints.

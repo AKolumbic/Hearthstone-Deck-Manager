@@ -4,6 +4,7 @@
   "description": "Database and Server code for Hearthstone Deck Manager emulator",
   "main": "server.js",
   "scripts": {
+    "test": "mocha tests.js",
     "start": "nodemon server.js"
   },
   "repository": "https://github.com/AKolumbic/Hearthstone-Deck-Manager",
@@ -18,6 +19,9 @@
     "unirest": "^0.5.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.6"
   }
 }

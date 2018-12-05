@@ -1,7 +1,7 @@
 require('dotenv').config({path: '../.env'});
 const express = require('express');
 const unirest = require('unirest');
-const classes = require('/classRouter');
+const classes = require('./classRouter');
 const HS_API_KEY = process.env.HS_API_KEY;
 
 // Initizalization/setup
@@ -41,7 +41,7 @@ router.get('/search/:id', (req, res) => {
 
 // Returns all collectible cards in a set. Example values: Blackrock Mountain, Classic.
 // KNOWN ISSUE: Curse of Naxxramas
-router.get('/sets/:id', (req, res) => {
+router.get('/set/:id', (req, res) => {
     const { set } = req.params.id;
     console.log(set)
     unirest
@@ -73,7 +73,7 @@ router.get('/tribe/:id', (req, res) => {
 
 // Returns all the collectible cards of a certain quality. 
 // Valid qualities in decending order: Legendary, Epic, Rare, Common
-router.get('/qualities/:id', (req, res) => {
+router.get('/quality/:id', (req, res) => {
     const { quality } = req.params.id;
     console.log(quality)
     unirest
