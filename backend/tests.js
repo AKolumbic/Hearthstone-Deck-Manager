@@ -12,17 +12,17 @@ chai.use(chaiHTTP);
 describe('API Route Testing: ', () => {
 
     // server.js route tests:
-    it('Makes sure the server is running', (done) => {
-        chai.request(server)
-            .get('/')
-            .end((err, res) => {
-                if (err) console.warn(err);
-                else {
-                    assert(res.body.content === 'The server is up and running!');
-                    done();
-                }
-            })
-    });
+    // it('Makes sure the server is running', (done) => {
+    //     chai.request(server)
+    //         .get('/')
+    //         .end((err, res) => {
+    //             if (err) console.warn(err);
+    //             else {
+    //                 assert(res.body.content === 'The server is up and running!');
+    //                 done();
+    //             }
+    //         })
+    // });
 
     it('BOOM TESTPOINT: ', (done) => {
         chai.request(server)
@@ -63,71 +63,71 @@ describe('API Route Testing: ', () => {
 
 
     // cardRouter.js route tests:
-    it('ALL CARDS endpoint: ', (done) => {
-        chai.request(server)
-            .get('/cards/')
-            .end((err, res) => {
-                if (err) console.warn(err);
-                else {
-                    assert(res.status === 200);
-                    done();
-                }
-            })
-    });
+    // it('ALL CARDS endpoint: ', (done) => {
+    //     chai.request(server)
+    //         .get('/cards/')
+    //         .end((err, res) => {
+    //             if (err) console.warn(err);
+    //             else {
+    //                 assert(res.status === 200);
+    //                 done();
+    //             }
+    //         })
+    // });
 
-    it('SEARCH endpoint: ', (done) => {
-        chai.request(server)
-            .get('/cards/search/Dr.%Boom')
-            .end((err, res) => {
-                if (err) console.warn(err);
-                else {
-                    assert(res.status === 200);
-                    done();
-                }
-            })
-    });
+    // it('SEARCH endpoint: ', (done) => {
+    //     chai.request(server)
+    //         .get('/cards/search/Dr.%Boom')
+    //         .end((err, res) => {
+    //             if (err) console.warn(err);
+    //             else {
+    //                 assert(res.status === 200);
+    //                 done();
+    //             }
+    //         })
+    // });
 
-    it('SET endpoint: ', (done) => {
-        chai.request(server)
-            .get('/cards/set/Blackrock%Mountain')
-            .end((err, res) => {
-                if (err) console.warn(err);
-                else {
-                    assert(res.status === 200);
-                    done();
-                }
-            })
-    });
+    // it('SET endpoint: ', (done) => {
+    //     chai.request(server)
+    //         .get('/cards/set/Blackrock%Mountain')
+    //         .end((err, res) => {
+    //             if (err) console.warn(err);
+    //             else {
+    //                 assert(res.status === 200);
+    //                 done();
+    //             }
+    //         })
+    // });
 
-    it('TRIBE endpoint: ', (done) => {
-        chai.request(server)
-            .get('/cards/tribe/Murloc')
-            .end((err, res) => {
-                if (err) console.warn(err);
-                else {
-                    assert(res.status === 200);
-                    done();
-                }
-            })
-    });
+    // it('TRIBE endpoint: ', (done) => {
+    //     chai.request(server)
+    //         .get('/cards/tribe/Murloc')
+    //         .end((err, res) => {
+    //             if (err) console.warn(err);
+    //             else {
+    //                 assert(res.status === 200);
+    //                 done();
+    //             }
+    //         })
+    // });
 
-    it('QUALITY endpoint: ', (done) => {
-        chai.request(server)
-            .get('/cards/quality/Legendary')
-            .end((err, res) => {
-                if (err) console.warn(err);
-                else {
-                    assert(res.status === 200);
-                    done();
-                }
-            })
-    });
+    // it('QUALITY endpoint: ', (done) => {
+    //     chai.request(server)
+    //         .get('/cards/quality/Legendary')
+    //         .end((err, res) => {
+    //             if (err) console.warn(err);
+    //             else {
+    //                 assert(res.status === 200);
+    //                 done();
+    //             }
+    //         })
+    // });
 
     // END of cardRouter tests. ###############################################
 
 
     // classRouter.js route tests:
-    describe('TESTS for Class Routes: ', () => {
+    // describe('TESTS for Class Routes: ', () => {
 
         it('DRUID endpoint: ', (done) => {
             chai.request(server)
@@ -229,7 +229,7 @@ describe('API Route Testing: ', () => {
             chai.request(server)
                 .get('/cards/class/warrior')
                 .end((err, res) => {
-                    if (err) console.warn(err);
+                    if (err) console.warn("*", err);
                     else {
                         assert(res.status === 200);
                         done();
@@ -237,7 +237,7 @@ describe('API Route Testing: ', () => {
                 })
         });
         
-    });
+    // });
     // END of classRouter tests. ##############################################
-    
+
 });

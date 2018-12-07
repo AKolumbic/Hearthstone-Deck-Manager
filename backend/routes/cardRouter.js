@@ -16,8 +16,8 @@ router.get('/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -32,8 +32,8 @@ router.get('/search/:id', (req, res) => {
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/${query}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -48,8 +48,8 @@ router.get('/set/:id', (req, res) => {
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/${set}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -64,8 +64,8 @@ router.get('/tribe/:id', (req, res) => {
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/races/${tribe}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -80,8 +80,8 @@ router.get('/quality/:id', (req, res) => {
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/qualities/${quality}?collectible=1`)
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });

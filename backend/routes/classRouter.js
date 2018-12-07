@@ -15,8 +15,8 @@ router.get('/:id', (req, res) => {
         .get(`https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/${HSclass}`)
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -28,8 +28,8 @@ router.get('/druid/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/druid?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -41,8 +41,8 @@ router.get('/hunter/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/hunter?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -54,8 +54,8 @@ router.get('/mage/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/mage?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -67,8 +67,8 @@ router.get('/paladin/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/paladin?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -79,8 +79,8 @@ router.get('/priest/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/priest?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -92,8 +92,8 @@ router.get('/rogue/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/rogue?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -105,8 +105,8 @@ router.get('/shaman/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/shaman?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -118,8 +118,8 @@ router.get('/warlock/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/warlock?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -131,8 +131,8 @@ router.get('/warrior/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/warrior?collectible=1")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });

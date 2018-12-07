@@ -32,8 +32,8 @@ server.get('/info/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/info")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -45,8 +45,8 @@ server.get('/cardbacks/', (req, res) => {
         .get("https://omgvamp-hearthstone-v1.p.mashape.com/cardbacks")
         .header("X-Mashape-Key", HS_API_KEY)
         .end((result) => {
-            console.log(result.status);
-            console.log(result.headers);
+            // console.log(result.status);
+            // console.log(result.headers);
             // console.log(result.body);
             res.status(200).send(result);
         });
@@ -61,10 +61,10 @@ server.get('/boom/', (req, res) => {
             if (!result) {
                 res.status(500).send({ error: "Error Getting Card Info"})
             }
-            console.log(result.status);
-            console.log(result.headers);
-            console.log(result.body);
-            console.log("BOOM!")
+            // console.log(result.status);
+            // console.log(result.headers);
+            // console.log(result.body);
+            // console.log("BOOM!")
             res.status(200).send(result);
         });
 });
