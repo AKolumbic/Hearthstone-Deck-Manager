@@ -14,7 +14,7 @@ server.use(express.json());
 
 // CORS 
 const corsOptions = {
-    origin: 'http://localhost:3000/',
+    origin: 'http://localhost:3000',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204.
 }
 server.use(cors(corsOptions));
@@ -61,10 +61,10 @@ server.get('/boom/', (req, res) => {
             if (!result) {
                 res.status(500).send({ error: "Error Getting Card Info"})
             }
-            // console.log(result.status);
-            // console.log(result.headers);
-            // console.log(result.body);
-            // console.log("BOOM!")
+            console.log(result.status);
+            console.log(result.headers);
+            console.log(result.body);
+            console.log("BOOM!")
             res.status(200).send(result);
         });
 });
