@@ -6,7 +6,7 @@ const cards = require('./routes/cardRouter');
 
 // Environment Variables
 const HS_API_KEY = process.env.HS_API_KEY;
-const port = process.env.PORT || 8000;
+const port = process.env.PORT;
 
 // Setup
 const server = express();

@@ -19,7 +19,11 @@ class BOOM extends Component {
         return (
             <div>
                 {console.log("STATE: ", this.state.cards)}
-                <h1>{this.state.cards.name}</h1>
+                <div>
+                    <img src={this.state.cards.img} alt="card_img" />
+                    <h1>{this.state.cards.name}</h1>
+                    <h5>Cost: {this.state.cards.cost} / Attack: {this.state.cards.attack} / Health: {this.state.cards.health}</h5>
+                </div>
             </div>
         );
     }
